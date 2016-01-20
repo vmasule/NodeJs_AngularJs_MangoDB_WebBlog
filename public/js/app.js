@@ -2,25 +2,18 @@
 
 // Declare app level module which depends on filters, and services
 
-angular.module('myApp', [
-  'myApp.controllers',
-  'myApp.filters',
-  'myApp.services',
-  'myApp.directives'
+angular.module('blogApp', [
+  'blogApp.controllers'
 ]).
 config(function ($routeProvider, $locationProvider) {
   $routeProvider.
-    when('/view1', {
-      templateUrl: 'partials/partial1',
-      controller: 'MyCtrl1'
-    }).
-    when('/view2', {
-      templateUrl: 'partials/partial2',
-      controller: 'MyCtrl2'
-    }).
-    otherwise({
-      redirectTo: '/view1'
+    when('/viewPosts', {
+      templateUrl: 'partials/postTemplate.html',
+      controller: 'PostController'
+    }).otherwise({
+      redirectTo: '/viewPosts'
     });
 
+   console.log("Inside app");
   $locationProvider.html5Mode(true);
 });

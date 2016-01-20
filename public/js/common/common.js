@@ -14,7 +14,7 @@
  	  <!--Home page link click event -->
       $('#homePage').click(function(e) {
         e.preventDefault();
-        createAndSubmitDynamicForm("/", "", "GET", false);
+        createAndSubmitDynamicForm("/viewPosts", "", "GET", false);
         // $('#homePage').addClass('active');
       });      
   });

@@ -1,0 +1,75 @@
+  <!DOCTYPE html>
+    <html lang="en" ng-app="blogApp">
+      <head>
+        <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+          <meta name="description" content="">
+          <meta name="author" content="">
+          <link rel="icon" href="../img/favicon.ico">
+
+          <title>View new blog posts</title>
+
+          <!-- Bootstrap core CSS -->
+          <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+          <link rel="stylesheet" href="../css/style.css">
+
+            <!--Easy editor plugin css -->
+          <link rel="stylesheet" href="../easyeditor/src/easyeditor.css">
+
+            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+          <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+          <!-- Custom styles for this template -->
+          <link href="../css/blog.css" rel="stylesheet">
+          <script src="../js/ie-emulation-modes-warning.js"></script>
+    </head>
+    <body>
+      
+      <div class="blog-masthead">
+        <div class="container" style="margin-bottom:20px">
+          <nav class="blog-nav">
+            <a class="blog-nav-item" id="homePage" href="">Home</a>
+            <a class="blog-nav-item" id="createNewPost" href="">New Post</a>
+            <a class="blog-nav-item" href="#">Press</a>
+            <a class="blog-nav-item" href="#">New hires</a>
+            <a class="blog-nav-item" href="#">About</a>
+          </nav>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <!-- <div class="blog-post" ng-repeat="post in posts">
+            <h2 class="blog-post-title">{{post.title}}</h2>
+            <p class="blog-post-meta">January 1, 2014 by <a href="#">{{post.name}}</a></p>
+            {{post.description}}
+          </div>  --> 
+          <!-- <ul>
+            <li ng-repeat="todo in todos">
+              <input type="checkbox" ng-model="todo.completed">
+              {{ todo.name }}
+            </li>
+          </ul> -->
+          <div ng-view></div>
+        </div>  
+      </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/lib/angular/angular.js"></script>
+    <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/common/common.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/controllers.js"></script>
+    </body>
+      <script>
+       jQuery(document).ready(function($) {
+                  
+      console.log("Inside post html");
+       });
+
+      </script>
+    </html>

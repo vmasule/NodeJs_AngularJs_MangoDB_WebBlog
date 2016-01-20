@@ -1,0 +1,6 @@
+<article class="blog-post" ng-repeat="post in posts">
+	<h1 class="blog-post-title"><a href="#/post/{{ posts.indexOf(post) }}">{{ post.title }}</a></h1>
+	<p class="blog-post-meta">January 1, 2014 by <a href="#">{{post.name}}</a></p>
+	{{post.description}}
+	<!-- <a href="#/post/{{ posts.indexOf(post) }}">Read more &rarr;</a> -->
+</article>
