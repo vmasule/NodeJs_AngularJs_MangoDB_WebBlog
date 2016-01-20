@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-angular.module('blogApp.controllers', []).
+angular.module('blogApp.controllers', ['ngSanitize']).
   controller('PostController', function ($scope, $http) {
 
     console.log("Inside controller");

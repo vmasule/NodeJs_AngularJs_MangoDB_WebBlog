@@ -67,6 +67,8 @@ app.post('/saveArticle',function(req,res){
    var jsonArray = "["+JSON.stringify(req.body)+"]";
    //console.log('Array is; '+ jsonArray);
    var data = JSON.parse(jsonArray);
+   data[0].createdDate = new Date().toString().split(' ').splice(1,3).join(' ');
+   //console.log(data)
    insertDocument(dbConnect, data, function() {
      console.log('Record stored successfully!!!');
    });
