@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 });
 
 app.get(['/', '/viewPosts'],function(req,res){
-   res.sendFile('index123.html', {'root': __dirname+ '/views'});
+   res.sendFile('posts.html', {'root': __dirname+ '/views'});
    console.log("Request Angular post accepted");
 });
 
