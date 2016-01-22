@@ -12,7 +12,7 @@ var fs = require('fs');
 var mongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var ObjectId = require('mongodb').ObjectID;
-var url = 'mongodb://192.168.6.138:27017/test';
+var url = 'mongodb://192.168.6.130:27017/test';
 var dbConnect= null;
 
 
@@ -26,12 +26,6 @@ app.use(bodyParser.json());
 
 // parse application/x-www-form-urlencoded of request body
 app.use(bodyParser.urlencoded({ extended: true }));
-
-
-/*app.get('/',function(req,res){
-   res.sendFile('posts.html', {'root': __dirname+ '/views'});
-   console.log("Request Angular post accepted");
-});*/
 
  app.get('/newPost',function(req,res){
    res.sendFile('createNewPost.html', {'root': __dirname+ '/views'});

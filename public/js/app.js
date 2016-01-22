@@ -13,7 +13,6 @@ config(function ($routeProvider, $locationProvider) {
     }).otherwise({
       redirectTo: '/viewPosts'
     });
-
-   console.log("Inside app");
+    
   $locationProvider.html5Mode(true);
 });
